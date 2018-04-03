@@ -7,5 +7,5 @@ function stairsOrDoor() {
     } else if (response == 'OPEN DOOR') {
       document.getElementById("door").classList.toggle('hidden');
       document.getElementById("intro").classList.add('hidden').toggle('hidden');
-    } else { document.getElementById("error").innerHTML = "Your are a Wuss!" }
+    } else { document.getElementById("error").innerHTML = "You are a Wuss!" }
 }
