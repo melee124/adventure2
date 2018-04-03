@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <title>Choose Your Own Adventure</title>
+      <header class="row">
+         <div class="container">
+            <h1>CHOOSE YOUR PATH</h1>
+         </div>
+      </header>
+   </head>
+   <body>
+      <!-- <div class="container">
+         <h1>Before you begin, you must select a name for your hero!</h1>
+         <div id="blanks">
+         	<form>
+         		<label for="heroName">Your hero's name</label> <input class="form-control" id="heroName" type="text"> <button id="btn" type="submit">I'm Ready!</button>
+         	</form>
+         </div> -->
+      <div id="intro">
+         <div class="container">
+            <p>You begin your quest at a front door of a large house. You walk into the main floor and have two options once inside:</p>
+            <p>"Before you, there are stairs to an open attic or a door leading to a dark basement"</p>
+            <p>Do you TAKE STAIRS, OPEN DOOR or WUSS OUT?</p>
+         </div>
+         <div class="container">
+            <input id="response" placeholder="Type 'TAKE STAIRS' or 'OPEN DOOR' . Case sensitive!" size="50"> <button onclick="stairsOrDoor()">CHOOSE YOUR PATH!</button>
+            <p id="error"></p>
+         </div>
+      </div>
+      <div class="hidden" id="Door">
+         <div class="container text-background">
+            <p>You OPEN THE DOOR and go down to the basement, but it is completely black. Suddenly a gigantic dragon and belches a ball of fire at you.</p>
+            <p>Before you can respond or even react, he lunges down at you and bites your head off.</p>
+            <p>You are dead.</p>
+            <p>Would you like to play again? Refresh the browser!</p>
+         </div>
+      </div>
+      <div class="hidden" id="stairs">
+         <div class="container text-background">
+            <p>You walk up the stairs. A strange feeling overcomes you. A black cloud suddenly surrounds the attic.</p>
+            <p>You are unable to breath. Slowly you lose consciousness from lack of air.</p>
+            <p>You are dead.</p>
+            <p>Would you like to play again? Refresh the browser!</p>
+         </div>
+      </div>
+      </div>
+   </body>
+</html>
