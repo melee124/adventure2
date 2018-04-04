@@ -32,11 +32,14 @@ function weaponofChoice() {
     debugger;
     if (weapon === '1' || weapon ==='3') {
     document.getElementById("poolNoodle").classList.toggle('hidden');
-    document.getElementById("fight").classList.toggle('hidden');
+    document.getElementById("story").classList.toggle('hidden');
    } else if (weapon === '2') {
     document.getElementById("sword").classList.toggle('hidden');
-    document.getElementById("fight").classList.toggle('hidden');
+    document.getElementById("story").classList.toggle('hidden');
   } else { document.getElementById("death").innerHTML = "Grenades don't work on dragons, dude!"}
 }
 
 //UL Logic
+//$(document).ready(function() {
+//  $("#form-group form").submit(function(event) {
+//    var inputheroName = $("input#heroName").val();
