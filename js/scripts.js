@@ -27,4 +27,16 @@ function stairsOrDoor() {
     } else { document.getElementById("error").innerHTML = "You are a Wuss!" }
 }
 
+function weaponofChoice() {
+  var weapon = document.getElementById("weapon").value;
+    debugger;
+    if (weapon === '1' || weapon ==='3') {
+    document.getElementById("poolNoodle").classList.toggle('hidden');
+    document.getElementById("fight").classList.toggle('hidden');
+   } else if (weapon === '2') {
+    document.getElementById("sword").classList.toggle('hidden');
+    document.getElementById("fight").classList.toggle('hidden');
+  } else { document.getElementById("death").innerHTML = "Grenades don't work on dragons, dude!"}
+}
+
 //UL Logic
