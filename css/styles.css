@@ -8,6 +8,14 @@
   position: relative;
 }
 
+.container {
+  background-color: #696969;
+  opacity: .90;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
 header {
   padding-top:30px;
   padding-bottom:20px;
@@ -31,7 +39,7 @@ img {
   margin-right: 10px;
 }
 
-.btn {
+.button {
   color: #900;
   border: 1px solid #900;
   font-weight: bold;
