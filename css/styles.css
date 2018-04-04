@@ -11,9 +11,18 @@
 header {
   padding-top:30px;
   padding-bottom:20px;
-  background-color: red;
+  background-color: grey;
   margin-bottom: 50px;
 }
+
+.jumbotron {
+  border: 5px solid black;
+  margin-top: 20px;
+  color: Black;
+  text-align: left;
+  background-image: url(../img/creepyhouse.jpg);
+  background-size: 100%;
+  font-family: bold;
 
 img {
   width: 400px;
