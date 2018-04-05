@@ -15,29 +15,32 @@ else ( age < 13 )
 }
 
 
-function stairsOrDoor() {
+function mazeOrWuss() {
     var response = document.getElementById("response").value;
-
-    if (response === 'TAKE STAIRS') {
-      document.getElementById("stairs").classList.toggle('hidden');
-      document.getElementById("story").classList.toggle('hidden');
-    } else if (response == 'OPEN DOOR') {
-      document.getElementById("Door").classList.toggle('hidden');
-      document.getElementById("story").classList.toggle('hidden');
-    } else { document.getElementById("error").innerHTML = "You are a Wuss!" }
-}
-
-function weaponofChoice() {
-  var weapon = document.getElementById("weapon").value;
     debugger;
-    if (weapon === '1' || weapon ==='3') {
-    document.getElementById("poolNoodle").classList.toggle('hidden');
-    document.getElementById("story").classList.toggle('hidden');
-   } else if (weapon === '2') {
-    document.getElementById("sword").classList.toggle('hidden');
-    document.getElementById("story").classList.toggle('hidden');
-  } else { document.getElementById("death").innerHTML = "Grenades don't work on dragons, dude!"}
+    if (response === 'ENTER MAZE HOUSE') {
+      document.getElementById("maze").classList.toggle('hidden');
+      document.getElementById("story").classList.toggle('hidden');
+    } else if (response == 'WUSS OUT') {
+      document.getElementById("Wuss").classList.toggle('hidden');
+      document.getElementById("story").classList.toggle('hidden');
+    }
 }
+function whichDoor() {
+  var chooseDoor = document.getElementById("chooseDoor").value;
+
+    debugger;
+  if (whichDoor === '1') {
+    document.getElementById("mazeRoom").classList.toggle('hidden');
+    document.getElementById("maze").classList.toggle('hidden');
+  } else if (whichDoor === '2') {
+    document.getElementById("attic").classList.toggle('hidden');
+    document.getElementById("story").classList.toggle('hidden');
+  } else { document.getElementById("basement").classList.toggle('hidden');
+    document.getElementById("story").classList.toggle('hidden');
+  }
+}
+
 
 //UL Logic
 //$(document).ready(function() {
