@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <title>Choose Your Own Adventure</title>
+      <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h2>
+          CHOOSE YOUR PATH
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+   </head>
+     <!-- <img src= "creepyhouse.jpg" alt="Creepy House"> -->
+   <body>
+     <div class="container" id="enterName">
+           <div id="blanks">
+             <form>
+               <div class="userName">
+                 <h1>Give your Hero a name!</h1>
+                 <label for="heroName">Enter hero's name here:</label>
+                 <input id="heroName" class="form-control" type="text">
+                 <button type="submit" class="btn">Show me the story!</button>
+               </div>
+
+
+             </form>
+           </div>
+      <div id="story">
+         <div class="container">
+            <h3>The villainous Joker has tricked Super <span class="heroNameInput"></span> into drinking a super-UN-super potion that turns any super hero into a normal human being! Joker has hidden the antidote to this poisonous potion somewhere inside a maze house filled with dangerous monsters!</h3>
+            <h3> You, dear reader, must help Super <span class="heroNameInput"></span> choose the right path to the antidote without being eaten alive and before Joker's potion steals <span class="heroNameInput"></span>'s super powers forever! Ready, let's begin...</h3>
+            <img src="img/house_door.jpg" alt="The Front Door" id="image" height="400" width="400">
+            <h3>"You'll never find the antidote in time, Super <span class="heroNameInput"></span>, laughed the Joker hysterically while Super <span class="heroNameInput"></span> dashed towards the maze house. But once Super <span class="heroNameInput"></span> arrived the effects of the super-Un-super potion could already be felt. Super <span class="heroNameInput"></span> had two choices:</h3>
+            <h3>"Before you, there are stairs to an open attic or a door leading to a dark basement"</h3>
+            <h3>Are you in, or are you out?</h3>
+         </div>
+         <div class="container">
+            <input id="response" placeholder="Type 'ENTER MAZE HOUSE' or 'WUSS OUT' . Case sensitive!" size="50"> <button onclick="mazeOrWuss()">CHOOSE YOUR PATH!</button>
+            <p id="error"></p>
+         </div>
+      </div>
+      <div class="hidden" id="maze">
+         <div class="container text-background">
+           <img src="img/maze.jpg" alt="The Maze House" height="400" width="400" border="2">
+            <h3>Stepping inside the maze house Super <span class="heroNameInput"></span> was immediately ambushed by two of Joker's henchmen! Weakened by the the super-Un-super potion, Super <span class="heroNameInput"></span> had to fight extra hard to overpower the evil doers.</h3>
+            <h3> Once defeated, Super <span class="heroNameInput"></span> had three doors to choose from, all marked with different names.</h3>
+            <h3> Behind one of them was sure to be the antidote! But dangerous monsters could be lying in wait behind the others.</h3>
+            <h3> Which door should Super <span class="heroNameInput"></span> choose?</h3>
+            <h3>Pick a number from 1 to 3 to choose your door:</h3>
+            <div class="container">
+               <input id="chooseDoor" placeholder="Enter a numeral from 1 to 3" size="50"> <button onclick="whichDoor()">CHOOSE YOUR PATH!</button>
+               <p id="error"></p>
+            </div>
+         </div>
+       </div>
+      <div class="hidden" id="mazeRoom">
+        <div class="container text-background">
+          <img src="img/main.jpg" alt="Main Maze Room" id="image" height="400" width="400">
+          <h3>Upon opening the door to the maze room, Super <span class="heroNameInput"></span> instantly felt dizzy. The room was a spinning kaleidoscope of colors that hypnotized Super <span class="heroNameInput"></span>, entrancing our superhero into a helpless, childlike state.</h3> <h3>Standing there, still as a statue in the spinning colors of the maze room, Super <span class="heroNameInput"></span> succumbed to the poison of the super-Un-super potion, losing all super powers. Better luck next time! </h3>
+          <h3>Would you like to play again? Refresh the browser!</h3>
+        </div>
+      </div>
+      <div class="hidden" id="Wuss">
+        <div class="container text-background">
+          <img src="img/wuss.jpg" alt="You're a Wuss" id="image" height="400" width="400" border="2">
+          <h3>You have lost your super powers, but saved your life! Better luck next time!</h3>
+          <h3>Would you like to play again? Refresh the browser!</h3>
+        </div>
+      </div>
+      <div class="hidden" id="attic">
+        <div class="container text-background">
+          <img src="img/attic.jpg" alt="A Spooky Attic" id="image" height="400" width="400">
+          <h3>"Surely the antidote will be hidden somewhere up high", thought Super <span class="heroNameInput"></span>.</h3>
+          <h3> Ascending the stairs Super <span class="heroNameInput"></span> heard a deep and terrifying roar.
+          <h3>Upon reaching the landing Super <span class="heroNameInput"></span> was face to face with the most ferocious fire breathing dragon anyone has ever seen! Our hero had to think fast before being roasted like a marshmallow!</h3>
+          <h3> Quickly, Super <span class="heroNameInput"></span> ran behind the dragon to look for the antidote but no luck!</h3>
+          <h3> Just then, the giant dragon swung around, tripping Super <span class="heroNameInput"></span> with its long scaly tail.</h3>
+          <h3> Falling to the ground, Super <span class="heroNameInput"></span> let out a scream as the giant dragon scorched our hero to cinders!</h3>
+          <img src="img/dragon.gif" alt="Scorchy Dragon">
+          <h3>Game over man. Better luck next time.</h3>
+          <h3>Would you like to play again? Refresh the browser!</h3>
+        </div>
+      </div>
+      <div class="hidden" id="basement">
+        <div class="container text-background">
+          <img src="img/basement.jpeg" alt="The Basement" id="image" height="400" width="400" border="2">
+            <h3>"If I were the Joker," thought Super <span class="heroNameInput"></span>, "where would I hide the antidote? Hmmmmm, somewhere dark and scary, that's where!"</h3>
+            <h3> Slowly, Super <span class="heroNameInput"></span> opened to door to the basement. Peaking inside, the coast looked clear: no monsters, no henchmen.</h3>
+            <h3> Stepping down the creaky stairs, Super <span class="heroNameInput"></span> could see in the back of the basement a glowing beaker of golden liquid. "The antidote!" shouted Super <span class="heroNameInput"></span>, grabbing the glowing beaker and quickly chugging down it contents.</h3>
+            <h3> Almost instantly, Super <span class="heroNameInput"></span> could feel the effects. Super <span class="heroNameInput"></span> would remain super after all. </h3>
+            <h3>Now, to go get that Joker!</h3>
+        </div>
+      </div>
+   </body>
+</html>
